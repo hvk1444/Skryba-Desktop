@@ -14,9 +14,10 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws URISyntaxException, IOException {
         Parent root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
-        Image icon = new Image(getClass().getResource("icon.png").toURI().toString());
+        Image icon = new Image(getClass().getResource("icon.png").toExternalForm());
 
         Scene scene = new Scene(root);
+        scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
         stage.setScene(scene);
         stage.getIcons().add(icon);
         stage.setTitle("Skryba");
