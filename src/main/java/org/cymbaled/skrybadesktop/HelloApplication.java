@@ -13,7 +13,7 @@ import java.net.URISyntaxException;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws URISyntaxException, IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("scene1.fxml"));
         Image icon = new Image(getClass().getResource("icon.png").toExternalForm());
 
         Scene scene = new Scene(root);

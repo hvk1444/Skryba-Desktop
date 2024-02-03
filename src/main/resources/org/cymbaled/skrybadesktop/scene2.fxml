@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cymbaled.skrybadesktop.SceneController">
+    <children>
+        <Label fx:id="sceneTitle" layoutX="226.0" layoutY="74.0" text="This is scene 2">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Button layoutX="234.0" layoutY="200.0" mnemonicParsing="false" onAction="#switchToScene1" text="Switch to scene 1" />
+      <CubicCurve controlX1="-50.0" controlX2="50.0" controlY1="-100.0" controlY2="100.0" endX="150.0" fill="DODGERBLUE" layoutX="367.0" layoutY="332.0" startX="-150.0" stroke="BLACK" />
+    </children>
+</AnchorPane>
