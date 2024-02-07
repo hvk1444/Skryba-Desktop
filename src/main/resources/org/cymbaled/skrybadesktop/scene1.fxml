@@ -2,17 +2,11 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cymbaled.skrybadesktop.SceneController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cymbaled.skrybadesktop.Scene1Controller">
    <children>
-      <Label fx:id="sceneTitle" layoutX="226.0" layoutY="74.0" text="This is scene 1">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
-      <Button layoutX="234.0" layoutY="200.0" mnemonicParsing="false" onAction="#switchToScene2" text="Switch to scene 2" />
-      <Arc fill="DODGERBLUE" layoutX="114.0" layoutY="124.0" length="270.0" radiusX="100.0" radiusY="100.0" startAngle="45.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" />
+      <Label layoutX="98.0" layoutY="143.0" text="username" />
+      <TextField fx:id="nameTextField" layoutX="198.0" layoutY="139.0" />
+      <Button fx:id="loginButton" layoutX="238.0" layoutY="188.0" mnemonicParsing="false" onAction="#login" text="login" />
    </children>
 </AnchorPane>
