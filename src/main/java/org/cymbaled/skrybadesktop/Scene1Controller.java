@@ -6,7 +6,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -14,24 +18,23 @@ import java.io.IOException;
 public class Scene1Controller {
 
     @FXML
-    TextField nameTextField;
+    private Button logoutButton;
+    @FXML
+    private AnchorPane scenePane;
 
     private Stage stage;
-    private Scene scene;
-    private Parent root;
 
-    public void login (ActionEvent event) throws IOException {
-        String username = nameTextField.getText();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("scene2.fxml"));
-        root = loader.load();
+    public void logout (ActionEvent event) throws IOException {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Logout");
+        alert.setHeaderText("You're about to log out");
+        alert.setContentText("Do you want to save before exiting?");
 
-        Scene2Controller scene2Controller = loader.getController();
-        scene2Controller.displayName(username);
-
-        scene = new Scene(root);
-        stage = (Stage)((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(scene);
-        stage.show();
+        if(alert.showAndWait().get() == ButtonType.OK) {
+            stage = (Stage) scenePane.getScene().getWindow();
+            System.out.println("You just logged out");
+            stage.close();
+        }
     }
 
 }
