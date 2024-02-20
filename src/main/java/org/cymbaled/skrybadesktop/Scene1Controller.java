@@ -10,6 +10,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -18,23 +20,14 @@ import java.io.IOException;
 public class Scene1Controller {
 
     @FXML
-    private Button logoutButton;
+    private Button switchButton;
     @FXML
-    private AnchorPane scenePane;
+    private ImageView imgView;
 
-    private Stage stage;
+    Image myImage = new Image(getClass().getResourceAsStream("image2.jpg"));
 
-    public void logout (ActionEvent event) throws IOException {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Logout");
-        alert.setHeaderText("You're about to log out");
-        alert.setContentText("Do you want to save before exiting?");
-
-        if(alert.showAndWait().get() == ButtonType.OK) {
-            stage = (Stage) scenePane.getScene().getWindow();
-            System.out.println("You just logged out");
-            stage.close();
-        }
+    public void switchImage() {
+        imgView.setImage(myImage);
     }
 
 }
