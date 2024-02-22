@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
 <AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cymbaled.skrybadesktop.Scene1Controller">
    <children>
-      <Button fx:id="switchButton" layoutX="261.0" layoutY="362.0" mnemonicParsing="false" onAction="#switchImage" text="switch" />
-      <ImageView fx:id="imgView" fitHeight="150.0" fitWidth="200.0" layoutX="191.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@image1.jpeg" />
-         </image>
-      </ImageView>
+      <Button fx:id="myButton" layoutX="281.0" layoutY="362.0" mnemonicParsing="false" onAction="#submit" text="submit" />
+      <Label fx:id="myLabel" layoutX="282.0" layoutY="55.0" text="Welcome" />
+      <Label layoutX="264.0" layoutY="117.0" text="Enter your age" />
+      <TextField fx:id="myTextField" layoutX="236.0" layoutY="200.0" promptText="ex. 21" />
    </children>
 </AnchorPane>

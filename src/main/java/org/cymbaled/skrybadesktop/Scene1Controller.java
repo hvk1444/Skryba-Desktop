@@ -2,32 +2,33 @@ package org.cymbaled.skrybadesktop;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
-
-import java.io.IOException;
 
 public class Scene1Controller {
 
     @FXML
-    private Button switchButton;
+    private Button myButton;
     @FXML
-    private ImageView imgView;
+    private Label myLabel;
+    @FXML
+    private TextField myTextField;
 
-    Image myImage = new Image(getClass().getResourceAsStream("image2.jpg"));
+    int age;
 
-    public void switchImage() {
-        imgView.setImage(myImage);
+    public void submit(ActionEvent event) {
+        try {
+            age = Integer.parseInt(myTextField.getText());
+            System.out.println(age);
+            if (age >= 18) {
+                myLabel.setText("You are now signed up");
+            } else {
+                myLabel.setText("You are too young");
+            }
+        } catch (NumberFormatException e) {
+            System.out.println(e);
+        }
     }
 
 }
