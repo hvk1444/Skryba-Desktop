@@ -2,12 +2,15 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cymbaled.skrybadesktop.Scene1Controller">
    <children>
-      <Button fx:id="myButton" layoutX="281.0" layoutY="362.0" mnemonicParsing="false" onAction="#submit" text="submit" />
-      <Label fx:id="myLabel" layoutX="282.0" layoutY="55.0" text="Welcome" />
-      <Label layoutX="264.0" layoutY="117.0" text="Enter your age" />
-      <TextField fx:id="myTextField" layoutX="236.0" layoutY="200.0" promptText="ex. 21" />
+      <CheckBox fx:id="checkbox" layoutX="269.0" layoutY="244.0" mnemonicParsing="false" onAction="#onSwitch" text="on/off" />
+      <Label fx:id="myLabel" alignment="CENTER" layoutX="224.0" layoutY="65.0" text="OFF" textAlignment="CENTER">
+         <font>
+            <Font size="78.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
